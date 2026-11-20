@@ -62,9 +62,10 @@ nav a:hover{color:var(--ink)}
 .hero h1{font-size:clamp(38px,6.4vw,76px);line-height:1.02;font-weight:800;max-width:16ch}
 .hero .lede{font-size:clamp(18px,2vw,21px);max-width:var(--measure);color:var(--ink)}
 .hero .lede + .lede{color:var(--muted)}
-.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .facts div{padding:18px 18px 18px 0;display:grid;gap:4px}
-.facts div + div{padding-left:18px;border-left:1px solid var(--line)}
+.facts div:not(:nth-child(3n+1)){padding-left:18px;border-left:1px solid var(--line)}
+.facts div:nth-child(n+4){border-top:1px solid var(--line)}
 .facts b{font:600 28px/1.1 var(--display);font-variant-numeric:tabular-nums}
 .facts span{font-size:14px;color:var(--muted)}
 
@@ -149,7 +150,8 @@ footer{padding-block:24px;border-top:1px solid var(--line);font:400 13px var(--m
   .case{grid-template-columns:1fr;gap:24px}
   .also,.ops{grid-template-columns:1fr 1fr}
   .facts{grid-template-columns:1fr 1fr}
-  .facts div:nth-child(3){padding-left:0;border-left:0}
+  .facts div:nth-child(n){padding-left:18px;border-left:1px solid var(--line);border-top:0}
+  .facts div:nth-child(odd){padding-left:0;border-left:0}
   .facts div:nth-child(n+3){border-top:1px solid var(--line)}
 }
 @media (max-width:520px){
@@ -187,6 +189,8 @@ footer{padding-block:24px;border-top:1px solid var(--line);font:400 13px var(--m
   <img class="portrait" src="img/priya.jpg" alt="Priya Jha, smiling, in a light wool coat and round sunglasses" width="1000" height="1000">
   </div>
   <div class="facts" role="list">
+    <div role="listitem"><b>$2M+</b><span>in sales managed across brands</span></div>
+    <div role="listitem"><b>$500K+</b><span>in ad spend managed</span></div>
     <div role="listitem"><b>2 → 18</b><span>people at Bloom</span></div>
     <div role="listitem"><b>75–80%</b><span>client retention a year</span></div>
     <div role="listitem"><b>~25</b><span>retainers at peak</span></div>

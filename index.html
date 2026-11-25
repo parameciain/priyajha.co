@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3GWDWENG8Y"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3GWDWENG8Y');</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="canonical" href="https://priyajha.co/">
@@ -455,7 +459,7 @@ footer{padding-block:24px;border-top:1px solid var(--line);font:400 13px var(--m
         body:JSON.stringify({access_key:'4a444021-1058-4d05-a678-1fac6de3672f',subject:'New message from priyajha.co',from_name:'priyajha.co',name:name,email:email,company:f.company.value.trim(),message:msg})})
       .then(function(r){return r.json().then(function(d){return {ok:r.ok,d:d}})})
       .then(function(x){
-        if(x.ok && String(x.d.success)==='true'){f.reset();st.textContent='Thanks, your message is on its way. I\'ll reply soon.';st.className='form-status ok';btn.textContent='Sent'}
+        if(x.ok && String(x.d.success)==='true'){if(window.gtag){gtag('event','generate_lead',{form:'contact'})}f.reset();st.textContent='Thanks, your message is on its way. I\'ll reply soon.';st.className='form-status ok';btn.textContent='Sent'}
         else{throw new Error()}
       })
       .catch(function(){st.textContent='Sorry, that didn\'t send. Please email me at priyajha2595@gmail.com.';st.className='form-status err';btn.disabled=false;btn.textContent='Send message'});

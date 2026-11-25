@@ -450,8 +450,8 @@ footer{padding-block:24px;border-top:1px solid var(--line);font:400 13px var(--m
       if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){st.textContent='That email address doesn\'t look right. Please check it.';st.className='form-status err';return}
       if(f._honey.value){return}
       btn.disabled=true;btn.textContent='Sending…';st.textContent='';st.className='form-status';
-      fetch('https://formsubmit.co/ajax/priyajha2595@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
-        body:JSON.stringify({name:name,email:email,company:f.company.value.trim(),message:msg,_subject:'New message from priyajha.co',_template:'table',_replyto:email})})
+      fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify({access_key:'4a444021-1058-4d05-a678-1fac6de3672f',subject:'New message from priyajha.co',from_name:'priyajha.co',name:name,email:email,company:f.company.value.trim(),message:msg})})
       .then(function(r){return r.json().then(function(d){return {ok:r.ok,d:d}})})
       .then(function(x){
         if(x.ok && String(x.d.success)==='true'){f.reset();st.textContent='Thanks, your message is on its way. I\'ll reply soon.';st.className='form-status ok';btn.textContent='Sent'}

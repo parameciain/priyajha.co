@@ -187,18 +187,19 @@ footer{padding-block:24px;border-top:1px solid var(--line);font:400 13px var(--m
   .hero h1{animation:rise .7s ease-out both}
   @keyframes rise{from{transform:translateY(10px);opacity:.4}to{transform:none;opacity:1}}
 }
+.nav-on{color:var(--ink)!important;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px;text-decoration-color:var(--saffron)}
 </style>
 </head>
 <body>
 
 
-<div class="topbar"><div class="wrap">
+<div class="topbar" id="top"><div class="wrap">
 <header class="top">
   <div class="name">Priya Jha</div>
-  <nav aria-label="Sections">
-    <a href="#work">Work</a>
-    <a href="#creative">Brand &amp; packaging</a>
-    <a href="#bloom">Bloom</a>
+  <nav aria-label="Main">
+    <a href="#top" class="nav-on" aria-current="page">Portfolio</a>
+    <a href="/lab/">Lab</a>
+    <a href="/blog/">Blog</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>

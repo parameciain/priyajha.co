@@ -51,7 +51,11 @@ p{margin:0}
 .hl{background:linear-gradient(transparent 55%, color-mix(in srgb, var(--saffron) 70%, transparent) 55%);padding:0 .1em}
 
 /* top */
-header.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:22px;border-bottom:1px solid var(--line)}
+html{scroll-behavior:smooth}
+.topbar{position:sticky;top:0;z-index:50;background:var(--paper);margin-inline:-16px;padding-inline:16px;border-bottom:1px solid var(--line)}
+header.top{display:flex;justify-content:space-between;align-items:center;gap:8px 16px;flex-wrap:wrap;padding-block:16px}
+section[id]{scroll-margin-top:72px}
+@media (max-width:520px){section[id]{scroll-margin-top:96px}header.top{padding-block:12px}nav{gap:16px}}
 .name{font:800 20px/1 var(--display)}
 nav{display:flex;gap:20px;flex-wrap:wrap}
 nav a{font:500 14px var(--body);text-decoration:none;color:var(--muted)}
@@ -188,7 +192,7 @@ footer{padding-block:24px;border-top:1px solid var(--line);font:400 13px var(--m
 <body>
 
 
-<div class="wrap">
+<div class="topbar"><div class="wrap">
 <header class="top">
   <div class="name">Priya Jha</div>
   <nav aria-label="Sections">
@@ -198,7 +202,9 @@ footer{padding-block:24px;border-top:1px solid var(--line);font:400 13px var(--m
     <a href="#contact">Contact</a>
   </nav>
 </header>
+</div></div>
 
+<div class="wrap">
 <div class="hero">
   <div class="hero-main"><div class="hero-text">
   <span class="label">Marketer · Former agency founder · Vancouver, BC</span>

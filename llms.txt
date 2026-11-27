@@ -4,7 +4,7 @@
 
 ## Key pages
 - [Portfolio](https://priyajha.co/): case studies told halfway, brand and packaging work, how Bloom was run, contact form
-- [Lab](https://priyajha.co/lab/): Clearshelf (working name), a tool in progress that checks whether AI assistants understand a Shopify store's products and helps fix it in plain words
+- [Lab](https://priyajha.co/lab/): Clearshelf, a tool in progress that checks whether AI assistants understand a Shopify store's products and helps fix it in plain words
 - [Blog](https://priyajha.co/blog/): notes on SEO, AI search and growing brands
 
 ## Articles
